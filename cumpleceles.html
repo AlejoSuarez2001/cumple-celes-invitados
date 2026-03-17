@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El cumple de Celes 🍂</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;1,400&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #f5ede0;
+    font-family: 'Lora', serif;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 10% 20%, rgba(180,120,60,0.13) 0%, transparent 60%),
+      radial-gradient(ellipse at 90% 80%, rgba(160,90,40,0.10) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .page {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 0 0 60px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero {
+    background: #2b1a0e;
+    padding: 48px 32px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 32px;
+    background: #f5ede0;
+    clip-path: ellipse(55% 100% at 50% 100%);
+  }
+
+  .hero-eyebrow {
+    font-family: 'Lora', serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #c9956a;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .hero-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 58px;
+    color: #f5ede0;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .hero-title span { color: #c9956a; }
+
+  .hero-sub {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    color: rgba(245,237,224,0.6);
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+
+  .hero-chips {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .chip {
+    background: rgba(201,149,106,0.18);
+    border: 1px solid rgba(201,149,106,0.35);
+    color: #e8b98a;
+    font-size: 12px;
+    padding: 6px 16px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    font-family: 'Lora', serif;
+  }
+
+  .notebook {
+    margin: 32px 20px 0;
+    background: #fdfaf4;
+    border-radius: 4px;
+    border: 1px solid #d4b896;
+    box-shadow: 3px 4px 0 #c4a07a, 6px 8px 0 rgba(180,130,80,0.15);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .notebook-header {
+    background: #c9956a;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .notebook-header-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 26px;
+    color: #fdfaf4;
+  }
+
+  .notebook-lines {
+    padding: 24px 28px;
+    position: relative;
+  }
+
+  .notebook-lines::before {
+    content: '';
+    position: absolute;
+    left: 52px; top: 0; bottom: 0;
+    width: 1px;
+    background: rgba(201,149,106,0.3);
+  }
+
+  .form-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #8a6040;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    display: block;
+    font-family: 'Lora', serif;
+  }
+
+  .form-select {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1.5px solid #c9956a;
+    border-radius: 0;
+    padding: 8px 4px;
+    font-family: 'Lora', serif;
+    font-size: 15px;
+    color: #3a2010;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c9956a' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  .form-select option { background: #fdfaf4; color: #3a2010; }
+
+  .attendance-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .attend-btn {
+    flex: 1;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1.5px solid #c9956a;
+    background: transparent;
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    color: #8a6040;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .attend-btn.selected-yes { background: #2b1a0e; border-color: #2b1a0e; color: #f5ede0; }
+  .attend-btn.selected-no  { background: #8a6040; border-color: #8a6040; color: #f5ede0; }
+
+  .submit-btn {
+    width: 100%;
+    padding: 13px;
+    background: #2b1a0e;
+    color: #e8b98a;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 22px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: opacity 0.2s;
+  }
+
+  .submit-btn:hover { opacity: 0.85; }
+  .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  .error-msg {
+    color: #a03020;
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 12px;
+    font-family: 'Lora', serif;
+  }
+
+  .success-box { text-align: center; padding: 20px 0 8px; }
+  .success-box .big-icon { font-size: 36px; margin-bottom: 10px; }
+  .success-box .title { font-family: 'Dancing Script', cursive; font-size: 30px; color: #2b1a0e; margin-bottom: 6px; }
+  .success-box .sub { font-style: italic; color: #8a6040; font-size: 14px; }
+
+  .guest-section {
+    margin: 28px 20px 0;
+    background: #fdfaf4;
+    border-radius: 4px;
+    border: 1px solid #d4b896;
+    box-shadow: 3px 4px 0 #c4a07a;
+    overflow: hidden;
+  }
+
+  .guest-header {
+    background: #3a2010;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .guest-header-title { font-family: 'Dancing Script', cursive; font-size: 24px; color: #e8b98a; }
+  .guest-count { font-size: 11px; color: rgba(232,185,138,0.6); letter-spacing: 2px; text-transform: uppercase; font-family: 'Lora', serif; }
+
+  .guest-list { padding: 12px 24px 16px; }
+
+  .guest-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 0;
+    border-bottom: 1px dashed rgba(201,149,106,0.3);
+    gap: 12px;
+  }
+
+  .guest-item:last-child { border-bottom: none; }
+
+  .guest-name { font-family: 'Lora', serif; font-size: 15px; color: #2b1a0e; display: flex; align-items: center; gap: 8px; }
+
+  .badge { font-size: 11px; padding: 2px 10px; border-radius: 50px; font-family: 'Lora', serif; letter-spacing: 1px; }
+  .badge-yes { background: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; }
+  .badge-no  { background: #fce4ec; color: #880e4f; border: 1px solid #f48fb1; }
+
+  .empty-state { text-align: center; padding: 24px 0; color: #a08060; font-style: italic; font-size: 14px; }
+
+  .footer {
+    text-align: center;
+    margin-top: 36px;
+    color: #b09070;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'Lora', serif;
+  }
+
+  @keyframes floatLeaf {
+    0%   { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+    50%  { transform: translateY(-8px) rotate(6deg); opacity: 1; }
+    100% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+  }
+
+  .deco-leaf { position: absolute; font-size: 20px; pointer-events: none; animation: floatLeaf 4s ease-in-out infinite; }
+</style>
+</head>
+<body>
+
+<!-- NOTA: Este archivo necesita una base de datos real para funcionar fuera de Claude.ai -->
+<!-- Opciones: Firebase, Supabase, o Google Sheets como backend -->
+
+<div class="page">
+
+  <div class="hero">
+    <div class="deco-leaf" style="top:18px;left:18px;animation-delay:0s">🍂</div>
+    <div class="deco-leaf" style="top:14px;right:22px;animation-delay:1.2s">🌸</div>
+    <div class="deco-leaf" style="bottom:44px;right:14px;animation-delay:2s">🍁</div>
+    <div class="hero-eyebrow">domingo 12 de abril · 14 hs</div>
+    <div class="hero-title">El cumple<br>de <span>Celes</span></div>
+    <div class="hero-sub">Había una vez una chica que cumplía años…</div>
+    <div class="hero-chips">
+      <div class="chip">🍂 Dress code: Autumn</div>
+      <div class="chip">📍 Almagro 1678</div>
+    </div>
+  </div>
+
+  <div class="notebook">
+    <div class="notebook-header">
+      <div class="notebook-header-title">¿Venís? Anotate aquí</div>
+    </div>
+    <div class="notebook-lines">
+
+      <div id="form-content">
+        <label class="form-label">Tu nombre</label>
+        <select class="form-select" id="name-select">
+          <option value="">— Seleccioná tu nombre —</option>
+          <option>Ana García</option>
+          <option>Lucía Martínez</option>
+          <option>Valentina López</option>
+          <option>Camila Rodríguez</option>
+          <option>Florencia González</option>
+          <option>Julieta Pérez</option>
+          <option>Sofía Hernández</option>
+          <option>Agustina Díaz</option>
+          <option>Rocío Fernández</option>
+          <option>Martina Gómez</option>
+          <option>Micaela Torres</option>
+          <option>Noelia Vargas</option>
+          <option>Brenda Ruiz</option>
+          <option>Paula Morales</option>
+          <option>Daniela Castro</option>
+          <option>Natalia Romero</option>
+          <option>Carolina Suárez</option>
+          <option>Gabriela Flores</option>
+          <option>Marina Jiménez</option>
+          <option>Carla Álvarez</option>
+        </select>
+
+        <label class="form-label">¿Asistís?</label>
+        <div class="attendance-group">
+          <button class="attend-btn" id="btn-yes" onclick="selectAttendance('yes')">🌸 Sí, voy</button>
+          <button class="attend-btn" id="btn-no"  onclick="selectAttendance('no')">🍂 No puedo</button>
+        </div>
+
+        <div class="error-msg" id="error-msg" style="display:none"></div>
+        <button class="submit-btn" onclick="handleSubmit()">Confirmar ✨</button>
+      </div>
+
+      <div id="success-content" style="display:none">
+        <div class="success-box">
+          <div class="big-icon" id="success-icon">🥳</div>
+          <div class="title" id="success-title">¡Gracias!</div>
+          <div class="sub" id="success-sub">Nos vemos el 12 🍂</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="guest-section">
+    <div class="guest-header">
+      <div class="guest-header-title">Quiénes van</div>
+      <div class="guest-count" id="count-label">0 confirmadas</div>
+    </div>
+    <div class="guest-list" id="guest-list">
+      <div class="empty-state">Sé la primera en anotarte 🌸</div>
+    </div>
+  </div>
+
+  <div class="footer">🍁 con amor · celes 2025 🍂</div>
+</div>
+
+<script>
+  // ⚠️ REEMPLAZAR con Firebase/Supabase para uso real fuera de Claude.ai
+  let attendance = null;
+  let guests = JSON.parse(localStorage.getItem('celes_guests') || '[]');
+
+  renderGuests();
+
+  function selectAttendance(val) {
+    attendance = val;
+    document.getElementById('btn-yes').className = 'attend-btn' + (val === 'yes' ? ' selected-yes' : '');
+    document.getElementById('btn-no').className  = 'attend-btn' + (val === 'no'  ? ' selected-no'  : '');
+    document.getElementById('error-msg').style.display = 'none';
+  }
+
+  function handleSubmit() {
+    const name = document.getElementById('name-select').value;
+    const err = document.getElementById('error-msg');
+
+    if (!name) { err.textContent = 'Seleccioná tu nombre primero.'; err.style.display = 'block'; return; }
+    if (!attendance) { err.textContent = 'Indicá si vas a asistir.'; err.style.display = 'block'; return; }
+    if (guests.find(g => g.name === name)) { err.textContent = '¡Ya estás anotada! 🌸'; err.style.display = 'block'; return; }
+
+    const entry = { name, going: attendance, time: new Date().toLocaleDateString('es-AR') };
+    guests.push(entry);
+    localStorage.setItem('celes_guests', JSON.stringify(guests));
+    renderGuests();
+
+    document.getElementById('form-content').style.display = 'none';
+    document.getElementById('success-content').style.display = 'block';
+    document.getElementById('success-icon').textContent  = attendance === 'yes' ? '🥳' : '🍂';
+    document.getElementById('success-title').textContent = attendance === 'yes' ? '¡Te esperamos!' : '¡Se te va a extrañar!';
+    document.getElementById('success-sub').textContent   = attendance === 'yes' ? 'Nos vemos el domingo 12 🌸' : 'Gracias por avisar 💛';
+  }
+
+  function renderGuests() {
+    const list = document.getElementById('guest-list');
+    const going = guests.filter(g => g.going === 'yes');
+    const notGoing = guests.filter(g => g.going === 'no');
+    const all = [...going, ...notGoing];
+
+    document.getElementById('count-label').textContent = going.length + ' confirmada' + (going.length !== 1 ? 's' : '');
+
+    if (all.length === 0) {
+      list.innerHTML = '<div class="empty-state">Sé la primera en anotarte 🌸</div>';
+      return;
+    }
+
+    list.innerHTML = all.map(g => `
+      <div class="guest-item">
+        <div class="guest-name">${g.going === 'yes' ? '🌸' : '🍂'} ${g.name}</div>
+        <span class="badge ${g.going === 'yes' ? 'badge-yes' : 'badge-no'}">${g.going === 'yes' ? 'Va' : 'No va'}</span>
+      </div>
+    `).join('');
+  }
+</script>
+</body>
+</html>
