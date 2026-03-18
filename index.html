@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>El cumple de Celes 🍂</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;1,400&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<title>Invitación Bolicumple</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌻</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Aileron:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
     background: #f5ede0;
-    font-family: 'Lora', serif;
+    font-family: 'Aileron', sans-serif;
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
@@ -33,6 +34,7 @@
     padding: 0 0 60px;
     position: relative;
     z-index: 1;
+    background: #f5ede0;
   }
 
   .hero {
@@ -53,7 +55,7 @@
   }
 
   .hero-eyebrow {
-    font-family: 'Lora', serif;
+    font-family: 'Times New Roman MT Condensed', 'Times New Roman', Times, serif;
     font-size: 11px;
     letter-spacing: 4px;
     color: #c9956a;
@@ -62,8 +64,8 @@
   }
 
   .hero-title {
-    font-family: 'Dancing Script', cursive;
-    font-size: 58px;
+    font-family: 'Luxurious Script', cursive;
+    font-size: 65px;
     color: #f5ede0;
     line-height: 1.1;
     margin-bottom: 8px;
@@ -72,29 +74,11 @@
   .hero-title span { color: #c9956a; }
 
   .hero-sub {
-    font-family: 'Lora', serif;
+    font-family: 'Aileron', sans-serif;
     font-style: italic;
     color: rgba(245,237,224,0.6);
     font-size: 14px;
-    margin-bottom: 28px;
-  }
-
-  .hero-chips {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  .chip {
-    background: rgba(201,149,106,0.18);
-    border: 1px solid rgba(201,149,106,0.35);
-    color: #e8b98a;
-    font-size: 12px;
-    padding: 6px 16px;
-    border-radius: 50px;
-    letter-spacing: 1px;
-    font-family: 'Lora', serif;
+    margin-bottom: 0;
   }
 
   .notebook {
@@ -116,7 +100,7 @@
   }
 
   .notebook-header-title {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Luxurious Script', cursive;
     font-size: 26px;
     color: #fdfaf4;
   }
@@ -126,13 +110,6 @@
     position: relative;
   }
 
-  .notebook-lines::before {
-    content: '';
-    position: absolute;
-    left: 52px; top: 0; bottom: 0;
-    width: 1px;
-    background: rgba(201,149,106,0.3);
-  }
 
   .form-label {
     font-size: 11px;
@@ -141,7 +118,7 @@
     text-transform: uppercase;
     margin-bottom: 6px;
     display: block;
-    font-family: 'Lora', serif;
+    font-family: 'Times New Roman MT Condensed', 'Times New Roman', Times, serif;
   }
 
   .form-select {
@@ -151,7 +128,7 @@
     border-bottom: 1.5px solid #c9956a;
     border-radius: 0;
     padding: 8px 4px;
-    font-family: 'Lora', serif;
+    font-family: 'Aileron', sans-serif;
     font-size: 15px;
     color: #3a2010;
     outline: none;
@@ -178,7 +155,7 @@
     border-radius: 4px;
     border: 1.5px solid #c9956a;
     background: transparent;
-    font-family: 'Lora', serif;
+    font-family: 'Aileron', sans-serif;
     font-size: 14px;
     color: #8a6040;
     cursor: pointer;
@@ -199,8 +176,8 @@
     color: #e8b98a;
     border: none;
     border-radius: 4px;
-    font-family: 'Dancing Script', cursive;
-    font-size: 22px;
+    font-family: 'Luxurious Script', cursive;
+    font-size: 28px;
     cursor: pointer;
     letter-spacing: 1px;
     transition: opacity 0.2s;
@@ -214,12 +191,12 @@
     font-size: 12px;
     font-style: italic;
     margin-bottom: 12px;
-    font-family: 'Lora', serif;
+    font-family: 'Aileron', sans-serif;
   }
 
   .success-box { text-align: center; padding: 20px 0 8px; }
-  .success-box .big-icon { font-size: 36px; margin-bottom: 10px; }
-  .success-box .title { font-family: 'Dancing Script', cursive; font-size: 30px; color: #2b1a0e; margin-bottom: 6px; }
+  .success-box img { display: block; width: 100%; max-width: 280px; border-radius: 8px; margin: 0 auto 14px; }
+  .success-box .title { font-family: 'Luxurious Script', cursive; font-size: 28px; color: #2b1a0e; margin-bottom: 6px; }
   .success-box .sub { font-style: italic; color: #8a6040; font-size: 14px; }
 
   .guest-section {
@@ -239,8 +216,8 @@
     justify-content: space-between;
   }
 
-  .guest-header-title { font-family: 'Dancing Script', cursive; font-size: 24px; color: #e8b98a; }
-  .guest-count { font-size: 11px; color: rgba(232,185,138,0.6); letter-spacing: 2px; text-transform: uppercase; font-family: 'Lora', serif; }
+  .guest-header-title { font-family: 'Luxurious Script', cursive; font-size: 24px; color: #e8b98a; }
+  .guest-count { font-size: 11px; color: rgba(232,185,138,0.6); letter-spacing: 2px; text-transform: uppercase; font-family: 'Times New Roman MT Condensed', 'Times New Roman', Times, serif; }
 
   .guest-list { padding: 12px 24px 16px; }
 
@@ -255,9 +232,9 @@
 
   .guest-item:last-child { border-bottom: none; }
 
-  .guest-name { font-family: 'Lora', serif; font-size: 15px; color: #2b1a0e; display: flex; align-items: center; gap: 8px; }
+  .guest-name { font-family: 'Aileron', sans-serif; font-size: 15px; color: #2b1a0e; }
 
-  .badge { font-size: 11px; padding: 2px 10px; border-radius: 50px; font-family: 'Lora', serif; letter-spacing: 1px; }
+  .badge { font-size: 11px; padding: 2px 10px; border-radius: 50px; font-family: 'Times New Roman MT Condensed', 'Times New Roman', Times, serif; letter-spacing: 1px; white-space: nowrap; }
   .badge-yes { background: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; }
   .badge-no  { background: #fce4ec; color: #880e4f; border: 1px solid #f48fb1; }
 
@@ -267,10 +244,9 @@
     text-align: center;
     margin-top: 36px;
     color: #b09070;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-family: 'Lora', serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-family: 'Aileron', sans-serif;
   }
 
   @keyframes floatLeaf {
@@ -280,75 +256,142 @@
   }
 
   .deco-leaf { position: absolute; font-size: 20px; pointer-events: none; animation: floatLeaf 4s ease-in-out infinite; }
+
+  /* Modal */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 20px;
+  }
+
+  .modal-box {
+    background: #fdfaf4;
+    border-radius: 8px;
+    border: 2px solid #c9956a;
+    padding: 32px 28px;
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 6px 8px 0 #c4a07a;
+  }
+
+  .modal-title {
+    font-family: 'Luxurious Script', cursive;
+    font-size: 34px;
+    color: #2b1a0e;
+    margin-bottom: 8px;
+  }
+
+  .modal-sub {
+    font-family: 'Aileron', sans-serif;
+    font-style: italic;
+    color: #8a6040;
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .modal-actions { display: flex; flex-direction: column; gap: 10px; }
+
+  .modal-btn-back {
+    padding: 12px;
+    background: #2b1a0e;
+    color: #e8b98a;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Luxurious Script', cursive;
+    font-size: 20px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  .modal-btn-confirm {
+    padding: 11px;
+    background: transparent;
+    color: #8a6040;
+    border: 1.5px solid #c9956a;
+    border-radius: 4px;
+    font-family: 'Aileron', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  .modal-btn-back:hover, .modal-btn-confirm:hover { opacity: 0.75; }
 </style>
 </head>
 <body>
-
-<!-- NOTA: Este archivo necesita una base de datos real para funcionar fuera de Claude.ai -->
-<!-- Opciones: Firebase, Supabase, o Google Sheets como backend -->
 
 <div class="page">
 
   <div class="hero">
     <div class="deco-leaf" style="top:18px;left:18px;animation-delay:0s">🍂</div>
-    <div class="deco-leaf" style="top:14px;right:22px;animation-delay:1.2s">🌸</div>
-    <div class="deco-leaf" style="bottom:44px;right:14px;animation-delay:2s">🍁</div>
+    <div class="deco-leaf" style="top:14px;right:22px;animation-delay:1.2s">🌻</div>
+    <div class="deco-leaf" style="bottom:44px;right:14px;animation-delay:2s">🥀</div>
     <div class="hero-eyebrow">domingo 12 de abril · 14 hs</div>
-    <div class="hero-title">El cumple<br>de <span>Celes</span></div>
-    <div class="hero-sub">Había una vez una chica que cumplía años…</div>
-    <div class="hero-chips">
-      <div class="chip">🍂 Dress code: Autumn</div>
-      <div class="chip">📍 Almagro 1678</div>
-    </div>
+    <div class="hero-title">El cumple<br>de <span>CelesCami</span></div>
   </div>
 
   <div class="notebook">
     <div class="notebook-header">
-      <div class="notebook-header-title">¿Venís? Anotate aquí</div>
+      <div class="notebook-header-title">Anotate en la lista</div>
     </div>
     <div class="notebook-lines">
+
+      <div id="loading-msg" style="display:none; text-align:center; padding:24px 0; color:#8a6040; font-style:italic; font-size:14px; font-family:'Aileron',sans-serif;">
+        Consiguiendo invitados...
+      </div>
 
       <div id="form-content">
         <label class="form-label">Tu nombre</label>
         <select class="form-select" id="name-select">
-          <option value="">— Seleccioná tu nombre —</option>
-          <option>Ana García</option>
-          <option>Lucía Martínez</option>
-          <option>Valentina López</option>
-          <option>Camila Rodríguez</option>
-          <option>Florencia González</option>
-          <option>Julieta Pérez</option>
-          <option>Sofía Hernández</option>
-          <option>Agustina Díaz</option>
-          <option>Rocío Fernández</option>
-          <option>Martina Gómez</option>
-          <option>Micaela Torres</option>
-          <option>Noelia Vargas</option>
-          <option>Brenda Ruiz</option>
-          <option>Paula Morales</option>
-          <option>Daniela Castro</option>
-          <option>Natalia Romero</option>
-          <option>Carolina Suárez</option>
-          <option>Gabriela Flores</option>
-          <option>Marina Jiménez</option>
-          <option>Carla Álvarez</option>
+          <option value="">— Elegí tu nombre —</option>
+          <option>Primo</option>
+          <option>Fran</option>
+          <option>Calle</option>
+          <option>Dillom</option>
+          <option>Esecé La Chispa</option>
+          <option>María Agostina</option>
+          <option>Thiago (alias Tiala)</option>
+          <option>Ale</option>
+          <option>Hombrito</option>
+          <option>Tizi y Ben</option>
+          <option>John X</option>
+          <option>Leila</option>
+          <option>La Podadora</option>
+          <option>Meli</option>
+          <option>La Galga</option>
+          <option>Conjuntito</option>
+          <option>Sele</option>
+          <option>El Tío</option>
+          <option>Cice</option>
+          <option>Cami</option>
+          <option>Paga</option>
+          <option>Ezeq</option>
+          <option>Sol 😍👩‍❤️‍💋‍👩🏳️‍🌈</option>
+          <option>Yamil</option>
+          <option>Megalomama</option>
         </select>
 
-        <label class="form-label">¿Asistís?</label>
+        <label class="form-label">¿Venis?</label>
         <div class="attendance-group">
-          <button class="attend-btn" id="btn-yes" onclick="selectAttendance('yes')">🌸 Sí, voy</button>
-          <button class="attend-btn" id="btn-no"  onclick="selectAttendance('no')">🍂 No puedo</button>
+          <button class="attend-btn" id="btn-yes" onclick="selectAttendance('yes')">✨ Si, voy</button>
+          <button class="attend-btn" id="btn-no"  onclick="showNoModal()">🏳️‍🌈 No puedo</button>
         </div>
 
         <div class="error-msg" id="error-msg" style="display:none"></div>
-        <button class="submit-btn" onclick="handleSubmit()">Confirmar ✨</button>
+        <button class="submit-btn" onclick="handleSubmit()">Confirmar</button>
       </div>
 
       <div id="success-content" style="display:none">
         <div class="success-box">
-          <div class="big-icon" id="success-icon">🥳</div>
-          <div class="title" id="success-title">¡Gracias!</div>
-          <div class="sub" id="success-sub">Nos vemos el 12 🍂</div>
+          <img id="success-gif" src="" alt="" style="display:none">
+          <div class="title" id="success-title"></div>
+          <div class="sub" id="success-sub"></div>
         </div>
       </div>
 
@@ -358,22 +401,62 @@
   <div class="guest-section">
     <div class="guest-header">
       <div class="guest-header-title">Quiénes van</div>
-      <div class="guest-count" id="count-label">0 confirmadas</div>
+      <div class="guest-count" id="count-label">0 confirmados</div>
     </div>
     <div class="guest-list" id="guest-list">
-      <div class="empty-state">Sé la primera en anotarte 🌸</div>
+      <div class="empty-state">Anotate porfi, todavía no viene nadie :(</div>
     </div>
   </div>
 
-  <div class="footer">🍁 con amor · celes 2025 🍂</div>
+  <div class="footer">23 añitos de esquizofrenia 😚🫶🏽</div>
+</div>
+
+<!-- Modal "No puedo" -->
+<div class="modal-overlay" id="no-modal" style="display:none" onclick="closeModalIfOutside(event)">
+  <div class="modal-box">
+    <div class="modal-title">Sos tremendo puto</div>
+    <div class="modal-sub">¿En serio no podés venir?</div>
+    <div class="modal-actions">
+      <button class="modal-btn-back" onclick="closeModal()">Me arrepentí, voy</button>
+      <button class="modal-btn-confirm" onclick="confirmNo()">🏳️‍🌈 No puedo</button>
+    </div>
+  </div>
 </div>
 
 <script>
-  // ⚠️ REEMPLAZAR con Firebase/Supabase para uso real fuera de Claude.ai
-  let attendance = null;
-  let guests = JSON.parse(localStorage.getItem('celes_guests') || '[]');
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw-dZ-OFJ83sF_9WQlWdGwmqhJGStYhWASRWwh637pPES7aA2Vy6zCsqhkpo3izDMum/exec';
 
-  renderGuests();
+  let attendance = null;
+  let guests = [];
+  const myVote = localStorage.getItem('celes_my_vote');
+
+  async function init() {
+    document.getElementById('form-content').style.display = 'none';
+    document.getElementById('loading-msg').style.display = 'block';
+
+    try {
+      const res = await fetch(SCRIPT_URL);
+      guests = await res.json();
+    } catch (e) {
+      guests = [];
+    }
+
+    document.getElementById('loading-msg').style.display = 'none';
+    renderGuests();
+
+    if (myVote) {
+      const myEntry = guests.find(g => g.name === myVote);
+      if (myEntry) {
+        showSuccessScreen(myEntry.going);
+      } else {
+        document.getElementById('form-content').style.display = 'block';
+      }
+    } else {
+      document.getElementById('form-content').style.display = 'block';
+    }
+  }
+
+  init();
 
   function selectAttendance(val) {
     attendance = val;
@@ -382,24 +465,70 @@
     document.getElementById('error-msg').style.display = 'none';
   }
 
-  function handleSubmit() {
+  function showNoModal() {
+    document.getElementById('no-modal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('no-modal').style.display = 'none';
+  }
+
+  function closeModalIfOutside(e) {
+    if (e.target === document.getElementById('no-modal')) closeModal();
+  }
+
+  function confirmNo() {
+    closeModal();
+    selectAttendance('no');
+  }
+
+  async function handleSubmit() {
     const name = document.getElementById('name-select').value;
     const err = document.getElementById('error-msg');
+    const btn = document.querySelector('.submit-btn');
 
-    if (!name) { err.textContent = 'Seleccioná tu nombre primero.'; err.style.display = 'block'; return; }
+    if (!name) { err.textContent = 'Elegí tu nombre mamerto.'; err.style.display = 'block'; return; }
     if (!attendance) { err.textContent = 'Indicá si vas a asistir.'; err.style.display = 'block'; return; }
-    if (guests.find(g => g.name === name)) { err.textContent = '¡Ya estás anotada! 🌸'; err.style.display = 'block'; return; }
+    if (guests.find(g => g.name === name)) { err.textContent = 'Ya estás anotado/a'; err.style.display = 'block'; return; }
+
+    btn.disabled = true;
+    btn.textContent = 'Guardando...';
 
     const entry = { name, going: attendance, time: new Date().toLocaleDateString('es-AR') };
-    guests.push(entry);
-    localStorage.setItem('celes_guests', JSON.stringify(guests));
-    renderGuests();
 
+    try {
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(entry)
+      });
+      guests.push(entry);
+      localStorage.setItem('celes_my_vote', name);
+      renderGuests();
+      showSuccessScreen(attendance);
+    } catch (e) {
+      err.textContent = 'Error al guardar. Intentá de nuevo.';
+      err.style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = 'Confirmar';
+    }
+  }
+
+  function showSuccessScreen(going) {
     document.getElementById('form-content').style.display = 'none';
     document.getElementById('success-content').style.display = 'block';
-    document.getElementById('success-icon').textContent  = attendance === 'yes' ? '🥳' : '🍂';
-    document.getElementById('success-title').textContent = attendance === 'yes' ? '¡Te esperamos!' : '¡Se te va a extrañar!';
-    document.getElementById('success-sub').textContent   = attendance === 'yes' ? 'Nos vemos el domingo 12 🌸' : 'Gracias por avisar 💛';
+
+    const gif = document.getElementById('success-gif');
+    gif.style.display = 'block';
+
+    if (going === 'yes') {
+      gif.src = 'gon.gif';
+      document.getElementById('success-title').textContent = 'Gon te espera con un buen vaul 🍑';
+    } else {
+      gif.src = 'juan.gif';
+      document.getElementById('success-title').textContent = 'por qué no venis? Gay 🗣️';
+    }
   }
 
   function renderGuests() {
@@ -408,17 +537,17 @@
     const notGoing = guests.filter(g => g.going === 'no');
     const all = [...going, ...notGoing];
 
-    document.getElementById('count-label').textContent = going.length + ' confirmada' + (going.length !== 1 ? 's' : '');
+    document.getElementById('count-label').textContent = going.length + ' confirmado' + (going.length !== 1 ? 's' : '');
 
     if (all.length === 0) {
-      list.innerHTML = '<div class="empty-state">Sé la primera en anotarte 🌸</div>';
+      list.innerHTML = '<div class="empty-state">Anotate porfi, todavía no viene nadie :(</div>';
       return;
     }
 
     list.innerHTML = all.map(g => `
       <div class="guest-item">
-        <div class="guest-name">${g.going === 'yes' ? '🌸' : '🍂'} ${g.name}</div>
-        <span class="badge ${g.going === 'yes' ? 'badge-yes' : 'badge-no'}">${g.going === 'yes' ? 'Va' : 'No va'}</span>
+        <div class="guest-name">${g.name}</div>
+        <span class="badge ${g.going === 'yes' ? 'badge-yes' : 'badge-no'}">${g.going === 'yes' ? 'Viene' : 'Tiene gay'}</span>
       </div>
     `).join('');
   }
